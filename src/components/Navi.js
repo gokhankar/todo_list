@@ -21,17 +21,10 @@ export default class Navi extends Component {
             style={{ marginTop: "10px", marginLeft: "20px" }}
           />
         </Navbar.Brand>
-        {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" /> */}
         <Navbar.Collapse
           id="responsive-navbar-nav"
           className="justify-content-end"
-        >
-          <Nav>
-            <Navbar.Brand>
-              {/* <img src={IMG_} alt="" title="" width="99" height="40" /> */}
-            </Navbar.Brand>
-          </Nav>
-        </Navbar.Collapse>
+        ></Navbar.Collapse>
       </Navbar>
     );
   }

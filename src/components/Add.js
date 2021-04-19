@@ -53,14 +53,12 @@ const AppInput = styled.input`
   color: #617d98;
   &::placeholder {
     color: #c8d7e8;
-    opacity: 1; /* Firefox */
+    opacity: 1;
   }
   &:-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
     color: #c8d7e8;
   }
   &::-ms-input-placeholder {
-    /* Microsoft Edge */
     color: #c8d7e8;
   }
 `;

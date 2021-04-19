@@ -42,14 +42,12 @@ const AppSearch = styled.input`
   &::placeholder {
     color: #c8d7e8;
     text-align: right;
-    opacity: 1; /* Firefox */
+    opacity: 1;
   }
   &:-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
     color: #c8d7e8;
   }
   &::-ms-input-placeholder {
-    /* Microsoft Edge */
     color: #c8d7e8;
   }
 `;
