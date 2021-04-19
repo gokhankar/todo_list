@@ -43,7 +43,7 @@ const Main = styled.section`
 `;
 
 const AppHeader = styled.section`
-  margin-top: 100px;
+  margin-top: 30px;
   text-align: center;
   min-width: 360px;
 `;
@@ -62,7 +62,7 @@ const AddingSection = styled.section`
   max-width: 35rem;
   min-width: 360px;
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 2rem;
   border-radius: 0.25rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s linear;
