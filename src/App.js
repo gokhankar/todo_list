@@ -45,7 +45,7 @@ const Main = styled.section`
 const AppHeader = styled.section`
   margin-top: 30px;
   text-align: center;
-  min-width: 360px;
+  min-width: 320px;
 `;
 
 const ListSectionHeader = styled.section`
@@ -60,7 +60,7 @@ const AddingSection = styled.section`
   width: 90vw;
   margin: 0 auto;
   max-width: 35rem;
-  min-width: 360px;
+  min-width: 320px;
   text-align: center;
   margin-top: 2rem;
   border-radius: 0.25rem;
@@ -82,8 +82,7 @@ const ListSection = styled.section`
   margin: 0 auto;
   padding: 2rem;
   max-width: 35rem;
-  min-width: 360px;
-  min-width: 360px;
+  min-width: 320px;
   text-align: center;
   margin-top: 1rem;
   border-radius: 0.25rem;

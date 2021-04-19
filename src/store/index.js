@@ -25,9 +25,9 @@ class Store {
     alertify.notify("Added '" + value + "' to the list", "success", 3);
   };
 
-  removeTodo = (value) => {
-    this.todoList = this.todoList.filter((i) => i !== value);
-    alertify.error("Removed '" + value + "' from the list");
+  removeTodo = (todo) => {
+    this.todoList = this.todoList.filter((i) => i !== todo);
+    alertify.error("Removed '" + todo.value + "' from the list");
   };
 
   handleFilter = (e) => {
