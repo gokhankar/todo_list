@@ -7,12 +7,14 @@ import Filter from "../src/components/Filter";
 import Add from "../src/components/Add";
 import ClearCompleted from "./components/ClearCompleted";
 import Store from "../src/store";
+import Navi from "./components/Navi";
 
 const App = observer(() => {
   const completedTodos = Store.todoList.filter((todo) => todo.complete);
   const todoLength = Store.todoList.length;
   return (
     <Main>
+      <Navi />
       <AppHeader>
         <h1> a simple todo app </h1>
         <p>made with React and Mobx</p>
