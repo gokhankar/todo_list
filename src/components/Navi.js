@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 import Logo from "../assets/logo.png";
 
 export default class Navi extends Component {
