@@ -23,7 +23,6 @@ class Store {
   addTodo = (value) => {
     this.todoList.unshift(new Todo(value));
     alertify.notify("Added '" + value + "' to the list", "success", 3);
-    console.log(this.todoList.length);
   };
 
   removeTodo = (value) => {
@@ -39,8 +38,6 @@ class Store {
     todo.complete = !todo.complete;
     todo.complete === true &&
       alertify.notify("'" + todo.value + "' is completed", "success", 3);
-    const completedTodos = this.todoList.filter((todo) => todo.complete);
-    console.log("completed: " + completedTodos.length);
   };
 
   clearAllCompleted = () => {

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { observer } from "mobx-react";
 
 import TodoList from "../src/components/TodoList";
 import Filter from "../src/components/Filter";
@@ -7,7 +8,7 @@ import Add from "../src/components/Add";
 import ClearCompleted from "./components/ClearCompleted";
 import Store from "../src/store";
 
-function App() {
+const App = observer(() => {
   const completedTodos = Store.todoList.filter((todo) => todo.complete);
   const todoLength = Store.todoList.length;
   return (
@@ -19,7 +20,7 @@ function App() {
       <AddingSection>
         <Add />
       </AddingSection>
-      {todoLength !== 0 && (
+      {todoLength > 0 && (
         <ListSection>
           <ListSectionHeader>
             <h1 style={{ display: "inline" }}>my todos</h1>
@@ -31,19 +32,18 @@ function App() {
       )}
     </Main>
   );
-}
+});
 
 export default App;
 
 const Main = styled.section`
-  /* min-height: 100vh; */
-  /* display: grid; */
   place-items: center;
 `;
 
 const AppHeader = styled.section`
   margin-top: 100px;
   text-align: center;
+  min-width: 360px;
 `;
 
 const ListSectionHeader = styled.section`
@@ -58,6 +58,7 @@ const AddingSection = styled.section`
   width: 90vw;
   margin: 0 auto;
   max-width: 35rem;
+  min-width: 360px;
   text-align: center;
   margin-top: 5rem;
   border-radius: 0.25rem;
@@ -79,6 +80,8 @@ const ListSection = styled.section`
   margin: 0 auto;
   padding: 2rem;
   max-width: 35rem;
+  min-width: 360px;
+  min-width: 360px;
   text-align: center;
   margin-top: 1rem;
   border-radius: 0.25rem;

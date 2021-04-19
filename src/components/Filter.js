@@ -7,7 +7,6 @@ import Store from "../store";
 
 const Filter = observer(({ props }) => {
   const filtering = (e) => {
-    console.log(e.target.value);
     Store.handleFilter(e);
   };
   return (
@@ -30,6 +29,7 @@ const AddInputSection = styled.section`
 
 const AppSearch = styled.input`
   max-width: 8rem;
+  max-height: 2rem;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
   background: #f2f5f7;

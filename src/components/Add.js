@@ -10,7 +10,7 @@ const Add = observer(({ props }) => {
     setInputValue(target.value);
   };
   const handleClick = () => {
-    Store.addTodo(inputValue);
+    inputValue && Store.addTodo(inputValue);
     setInputValue("");
   };
   return (
