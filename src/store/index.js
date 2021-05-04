@@ -1,4 +1,11 @@
 import { computed, makeAutoObservable } from "mobx";
+import {
+  persistence,
+  clearPersist,
+  stopPersist,
+  isSynchronized,
+  StorageAdapter,
+} from "mobx-persist-store";
 import alertify from "alertifyjs";
 
 class Todo {
@@ -58,4 +65,21 @@ class Store {
   }
 }
 
-export default new Store();
+export default persistence({
+  name: "Store",
+  properties: ["todoList"],
+  adapter: new StorageAdapter({
+    read: async (name) => {
+      const data = window.localStorage.getItem(name);
+
+      return data ? JSON.parse(data) : undefined;
+    },
+    write: async (name, content) => {
+      window.localStorage.setItem(name, JSON.stringify(content));
+    },
+  }),
+  reactionOptions: {
+    // optional
+    delay: 200,
+  },
+})(new Store());

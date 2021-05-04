@@ -17,7 +17,7 @@ const App = observer(() => {
       <Navi />
       <AppHeader>
         <h1> a simple todo app </h1>
-        <p>made with React and Mobx</p>
+        <p>made with React, Mobx and mobx-persist-store</p>
       </AppHeader>
       <AddingSection>
         <Add />
