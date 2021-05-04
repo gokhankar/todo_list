@@ -1,9 +1,9 @@
 import { computed, makeAutoObservable } from "mobx";
 import {
   persistence,
-  clearPersist,
-  stopPersist,
-  isSynchronized,
+  // clearPersist,
+  // stopPersist,
+  // isSynchronized,
   StorageAdapter,
 } from "mobx-persist-store";
 import alertify from "alertifyjs";
